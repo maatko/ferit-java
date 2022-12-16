@@ -2,7 +2,7 @@ package me.mat.lv6.zadatak1;
 
 public class Zivotinja {
 
-    private final String vrsta;
+    protected final String vrsta;
 
     public Zivotinja(String vrsta) {
         this.vrsta = vrsta;
