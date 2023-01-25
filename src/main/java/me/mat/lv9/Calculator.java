@@ -93,20 +93,22 @@ public class Calculator extends JFrame implements ActionListener {
                     displayLabel.setText(displayLabel.getText() + " " + action + " ");
                     break;
                 case "=":
+                    float value = 0;
                     switch (this.action.toLowerCase()) {
                         case "/":
-                            displayLabel.setText(String.valueOf(Float.parseFloat(left) / Float.parseFloat(right)));
+                            value = Float.parseFloat(left) / Float.parseFloat(right);
                             break;
                         case "*":
-                            displayLabel.setText(String.valueOf(Float.parseFloat(left) * Float.parseFloat(right)));
+                            value = Float.parseFloat(left) * Float.parseFloat(right);
                             break;
                         case "-":
-                            displayLabel.setText(String.valueOf(Float.parseFloat(left) - Float.parseFloat(right)));
+                            value = Float.parseFloat(left) - Float.parseFloat(right);
                             break;
                         case "+":
-                            displayLabel.setText(String.valueOf(Float.parseFloat(left) + Float.parseFloat(right)));
+                            value = Float.parseFloat(left) + Float.parseFloat(right);
                             break;
                     }
+                    displayLabel.setText(String.valueOf(value));
                     this.action = null;
                     left = displayLabel.getText();
                     right = "";
